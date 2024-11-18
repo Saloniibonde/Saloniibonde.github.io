@@ -23,12 +23,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <meta property="og:type" content="website">
-  <meta property="og:title" content="The Hello World of Blogs">
-  <meta property="og:description" content="This is a blog post to get you started.">
+  <meta property="og:title" content="HW6 Visualizations">
+  <meta property="og:description" content="I am definitely not a corgi!">
   <meta property="og:image" content="https://media.tenor.com/8RcIoWTKYR4AAAAe/scuze-corgi.png">
 
-  <title>The Hello World of Blogs</title>
-  <meta name="description" content="This is a blog post to get you started.">
+  <title>HW6 Visualizations</title>
+  <meta name="description" content="I am definitely not a corgi!">
 
   <link rel="shortcut icon" type="image/x-icon" href="/assets/favicon.ico">
 
@@ -63,11 +63,11 @@
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
     <div class="navbar-nav ml-auto"><a class="nav-item nav-link " href="/python_notebooks/"></a>
 
-      <a class="nav-item nav-link " href="/projects/1-vega-lite-project/">HW6 Visualizations</a>
+      <a class="nav-item nav-link active" href="/projects/1-vega-lite-project/">HW6 Visualizations</a>
 
-      <a class="nav-item nav-link " href="/projects/">Projects</a>
+      <a class="nav-item nav-link active" href="/projects/">Projects</a>
 
-      <a class="nav-item nav-link active" href="/blog/">Blog</a>
+      <a class="nav-item nav-link " href="/blog/">Blog</a>
 
       <a class="nav-item nav-link " href="/about/">About</a>
 
@@ -78,57 +78,50 @@
   </div>
 
 </nav>
-    <div class="col-lg-10 mx-auto mt-5 markdown-body">
-  <h1><b>The Hello World of Blogs</b></h1>
+    <h1 id="homework-6---interactive-visualizations-with-altair">Homework 6 - Interactive Visualizations with Altair</h1>
 
-<p class="post-metadata text-muted">
-  22 August 2022 -  
-  <b>less than 1 min read time</b>
+<h2 id="visualization-1-count-of-licenses-by-license-type">Visualization 1: Count of Licenses by License Type</h2>
 
-  <br>Tags: 
-    
-    <a class="text-decoration-none no-underline" href="/blog/tags#technology">
-      <span class="tag badge badge-pill text-primary border border-primary">Technology</span>
-    </a>
-    
-    <a class="text-decoration-none no-underline" href="/blog/tags#blogging">
-      <span class="tag badge badge-pill text-primary border border-primary">Blogging</span>
-    </a>
-    </p>
+<p>This bar chart visualizes the count of licenses grouped by license type. The chart helps identify which license types are most common by providing a clear, visual comparison of counts across different categories.</p>
 
-<p>Source: <a href="https://github.com/YoussefRaafatNasry/portfolYOU">portfolYOU</a></p>
+<h3 id="design-choices">Design Choices</h3>
+<p>The x-axis represents the license type, sorted in descending order of the count, while the y-axis displays the total count of licenses for each type. A distinct color encoding is applied for each license type, helping differentiate the categories visually and highlighting their relative magnitudes.</p>
 
-<p>This is me writing an intro to this blog post.  So introlicioius.</p>
+<h3 id="data-transformations">Data Transformations</h3>
+<p>Data transformations included counting the number of licenses for each license type to generate a summarized view. Additionally, the x-axis was sorted by count to emphasize the highest and lowest categories.</p>
 
-<h2 id="1-here-is-one-thing-i-want-to-say">1. Here is one thing I want to say</h2>
+<h3 id="overlap-with-homework-5">Overlap with Homework #5</h3>
+<p>In Homework #5, a different dataset was used with no emphasis on sorting or color encoding. This visualization introduces sorting based on counts and applies color encoding to enhance clarity and comparison.</p>
 
-<p>This is maybe an important thing, and, at the very least it is first.</p>
+<iframe src="/python_notebooks/chart1.html" width="900" height="600"></iframe>
 
-<h2 id="2-another-thing">2. Another thing</h2>
+<hr />
 
-<p>I am now talking about a second thing, probably also good.</p>
+<h2 id="visualization-2-interactive-filtered-count-of-licenses-by-status">Visualization 2: Interactive Filtered Count of Licenses by Status</h2>
 
-<h2 id="3-a-third-thing">3. A third thing</h2>
+<p>This line chart shows the filtered count of licenses by status (e.g., ACTIVE, EXPIRED, NOT RENEWED) over time. The interactive component allows for enhanced exploration of license trends and status changes.</p>
 
-<p>We are now getting into the weeds of things that I am saying.  It is probably unlikely someone has made it thus far.</p>
+<h3 id="design-choices-1">Design Choices</h3>
+<p>The x-axis represents time, shown as a Year-Month format, while the y-axis indicates the count of licenses. Different colors represent license statuses, making it easier to distinguish trends. Tooltips provide additional information, such as status and count, when hovering over points on the line.</p>
 
-<h2 id="4-thing-4">4. Thing #4.</h2>
+<h3 id="interactivity">Interactivity</h3>
+<p>Interactivity is added via point markers on the line chart and tooltips. This allows users to explore data details dynamically by hovering, which improves the understanding of trends for specific statuses over time.</p>
 
-<p>At this point, you are probably no longer into me listing off things.  Let’s put in an image to placate the reader:</p>
+<h3 id="data-transformations-1">Data Transformations</h3>
+<p>The data was filtered to include specific statuses (e.g., ACTIVE, EXPIRED, NOT RENEWED) to focus on meaningful trends. Date fields were transformed into Year-Month values for better temporal analysis.</p>
 
-<p><img src="https://media.istockphoto.com/photos/welsh-corgi-picture-id962032196?k=20&amp;m=962032196&amp;s=170667a&amp;w=0&amp;h=NhIyQdJgVw0cw_EeLtP3LcLExLuiAWPwzL6_WsRKUfQ=" alt="corg" /></p>
+<h3 id="overlap-with-homework-5-1">Overlap with Homework #5</h3>
+<p>Unlike Homework #5, this visualization incorporates interactivity and a focus on a subset of data categories. These enhancements allow for a deeper exploration of license status trends over time.</p>
+<iframe src="/python_notebooks/filtered_chart.html" width="1000" height="480"></iframe>
 
-<h2 id="5-the-last-thing">5. The last thing</h2>
+<hr />
 
-<p>This is my final thing, probably would be great if this was a TL;DR or summary.  But I don’t have that for you.  I have given you so little already, why start saying anything useful now?</p>
-
-<p>Besides, all anybody wants is the DERP:</p>
-
-<p><img src="http://3.bp.blogspot.com/-AXnXOPZgqMk/Un-xCBAa4gI/AAAAAAAAsWA/z_lZsvDoCRk/s1600/derpstages.jpg" alt="MAXIMUM DERP" /></p>
+<p>
+  <a href="https://raw.githubusercontent.com/UIUC-iSchool-DataViz/is445_data/main/licenses_fall2022.csv" target="_blank" style="padding: 10px 20px; background-color: #007bff; color: white; text-decoration: none; border-radius: 5px; margin-right: 10px; display: inline-block;">The Data</a>  
+  <a href="https://github.com/Saloniibonde/Saloniibonde.github.io/blob/main/python_notebooks/test_generate_plots.ipynb" target="_blank" style="padding: 10px 20px; background-color: #007bff; color: white; text-decoration: none; border-radius: 5px; display: inline-block;">The Analysis</a>  
+</p>
 
 
-
-</div>
   </main>
   <footer class="mt-auto py-3 text-center">
 
